@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.error_page {
+    @include flexCenter(column);
+    height: 80vh;
+    margin: 50px;
+    background-color: $btnColor;
+    border-radius: 5px;
+
+    h1 {
+        background-color: transparent;
+        margin-bottom: 50px;
+    }
+
+    svg {
+        background-color: transparent;
+        fill: $textColor;
+        margin-bottom: 20px;
+        animation: moveDown 2s ease-in-out;
+        animation-delay: 1000ms;
+    }
+
+    a {
+        border: 1px solid $btnColor;
+        border-radius: 8px;
+        padding: 10px;
+        text-decoration: none;
+        color: $textColor;
+
+        &:hover {
+            background-color: black;
+            color: $backgroundColor;
+        }
+    }
+
+    @keyframes moveDown {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(18px);
+        }
+    }
+}

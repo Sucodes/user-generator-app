@@ -1,0 +1,74 @@
+@import '../../styles/variables.scss';
+
+.header {
+    height: 100vh;
+    text-shadow: 1px 1px 1px rgb(40, 39, 39);
+    color: $textColor;
+
+    .navbar {
+        @include flexCenter(row);
+        justify-content: space-between;
+        height: 70px;
+        margin: 0px 50px;
+
+        h3 {
+            font-weight: 400;
+            text-shadow: 1px 1px 1px rgb(40, 39, 39);
+        }
+
+        .menu {
+            cursor: pointer;
+            margin-top: 5px;
+            width: 20px;
+
+            svg {
+                fill: $textColor;
+                
+            }
+        }
+    }
+
+    .home {
+        height: 80vh;
+        margin: 0px 50px;
+        @include flexCenter(column);
+        background-color: $btnColor;
+        border-radius: 5px;
+
+        h1 {
+            margin: 20px 0px;
+            background-color: transparent;
+        }
+
+        svg {
+            background-color: transparent;
+            fill: $textColor;
+            margin-bottom: 20px;
+            animation: moveDown 2s ease-in-out;
+            animation-delay: 1000ms;
+        }
+
+        a {
+            border: 1px solid $btnColor;
+            border-radius: 8px;
+            padding: 10px;
+            text-decoration: none;
+            color: $textColor;
+
+            &:hover {
+                background-color: black;
+                color: $backgroundColor;
+            }
+        }
+    }
+
+    @keyframes moveDown {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(18px);
+        }
+    }
+}

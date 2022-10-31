@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+.users {
+    padding: 50px;
+    height: 100vh;
+    @include flexCenter(column);
+    justify-content: space-around;
+    text-shadow: 1px 1px 1px rgb(40, 39, 39);
+    background-color: $backgroundColor;
+
+    a {
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        border: 1px solid $btnColor;
+        border-radius: 8px;
+        padding: 10px;
+        text-decoration: none;
+        color: $textColor;
+
+        &:hover {
+            background-color: black;
+            color: $backgroundColor;
+        }
+    }
+
+    &_card {
+        border: 1px solid white;
+        border-radius: 8px;
+        background-color: $btnColor;
+        width: 100%;
+        padding: 8px;
+        @include flexCenter(row);
+        justify-content: space-between;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        p {
+            background-color: $btnColor;
+        }
+
+        span {
+            background-color: $btnColor;
+        }
+    }
+
+    .pag {
+        width: 100%;
+
+        ul {
+            list-style: none;
+            @include flexCenter(row);
+
+            li {
+                cursor: pointer;
+                border: 1px solid $btnColor;
+                border-radius: 4px;
+                font-size: 1rem;
+                padding: 8px;
+
+                &:hover {
+                    background-color: black;
+                    color: $backgroundColor;
+                }
+            }
+        }
+    }
+}
